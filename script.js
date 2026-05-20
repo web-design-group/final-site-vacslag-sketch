@@ -53,7 +53,7 @@ const GALLERY_BLOCKS = [
     type: 'group',
     tags: ['all', 'vocaloid'],  // ← ИСПРАВЛЕНО: было 'anime-manga', 'ln-illustration'
     previewImages: ['images/Image47.jpg', 'images/Image19.jpg', 'images/Image124.jpg'],
-    images: ['Image47.jpg', 'Image19.jpg', 'Image124.jpg', 'Image24.jpg', 'Image03.jpg', 'Image14.jpg', 'Image88.jpg', 'Image92.jpg', 'Image108.jpg', 'Image103.jpg', 'Image111.jpg', 'Image113.jpg', 'Image122.jpg', 'Image124.jpg', 'Image125.jpg', 'Image127.jpg']
+    images: ['Image47.jpg', 'Image19.jpg', 'Image124.jpg', 'Image24.jpg', 'Image03.jpg', 'Image14.jpg', 'Image88.jpg', 'Image92.jpg', 'Image108.jpg', 'Image103.jpg', 'Image111.jpg', 'Image113.jpg', 'Image122.jpg', 'Image125.jpg', 'Image127.jpg']
   },
   {
     id: 'graphic-design',
@@ -90,9 +90,6 @@ function initPortfolioRouter() {
   window.addEventListener('hashchange', () => renderRoute(root));
   root.addEventListener('click', handleGalleryClick);
   renderRoute(root);
-  
-  // Добавляем вызов fixMasonryLayout после начального рендера
-  setTimeout(fixMasonryLayout, 100);
 }
 
 function renderRoute(root) {
