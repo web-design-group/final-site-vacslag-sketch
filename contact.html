@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VacLav | Contacts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Post+No+Bills+Colombo:wght@400;600&family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="contact-page">
+
+<div class="container">
+
+  <!-- LEFT PANEL - Sidebar -->
+<aside class="sidebar">
+  <h1 class="name" onclick="window.location.href='index.html';" style="cursor: pointer; border-bottom: none; padding: 0; margin-bottom: 20px;">
+  <img src="images/Title.svg" alt="VacLav" style="width: 100%; max-width: 180px; height: auto;">
+</h1>
+
+    <div class="categories">
+      <a href="index.html#/tag/all" class="category-link">All</a>
+      <a href="index.html#/tag/original-characters" class="category-link">Original characters</a>
+      <a href="index.html#/tag/cartoons" class="category-link">Cartoons</a>
+      <a href="index.html#/tag/vocaloid" class="category-link">Vocaloid</a>
+      <a href="index.html#/tag/anime-manga" class="category-link">Anime/Manga</a>
+      <a href="index.html#/tag/ln-illustration" class="category-link">LN-illustration</a>
+      <a href="index.html#/tag/games" class="category-link">Games</a>
+      <a href="index.html#/tag/landscapes" class="category-link">Landscapes</a>
+      <a href="index.html#/tag/graphic-design" class="category-link">Graphic design</a>
+      <a href="index.html#/tag/others" class="category-link">Others</a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- Navigation with working links and active page highlight -->
+    <nav class="main-nav">
+      <a href="about.html" class="nav-link">Обо мне</a>
+      <a href="contact.html" class="nav-link active-page">Связь со мной</a>
+      <a href="resources.html" class="nav-link">Ресурсы</a>
+    </nav>
+
+    <!-- Social Icons -->
+<div class="social-icons">
+  <a href="https://discord.gg/jYSVGRtmV" class="social-link" aria-label="Discord">
+    <i class="fa-brands fa-discord"></i>
+  </a>
+
+  <a href="https://t.me/VacLav_2348" class="social-link" aria-label="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+
+  <a href="https://ru.pinterest.com/vaclav2348/" class="social-link" aria-label="Pinterest">
+    <i class="fa-brands fa-pinterest"></i>
+  </a>
+
+  <a href="https://x.com/vaclav2348" class="social-link" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="social-link" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <a href="mailto:vacslag@gmail.com" class="social-link" aria-label="Gmail">
+  <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+  </aside>
+
+  <!-- RIGHT PANEL - Contact Form -->
+  <main class="content">
+    <div class="page-content">
+      <h2 class="page-title">Связь со мной</h2>
+      
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Ваш email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Тема</label>
+          <input type="text" id="subject" name="subject" placeholder="Тема сообщения" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" rows="6" placeholder="Ваше сообщение..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Отправить</button>
+      </form>
+    </div>
+  </main>
+
+</div>
+<footer class="mobile-footer">
+    <nav class="mobile-nav">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="about.html" class="nav-link">Обо мне</a>
+    </nav>
+    <div class="mobile-socials">
+  <a href="https://discord.gg/jYSVGRtmV" class="social-link" aria-label="Discord">
+    <i class="fa-brands fa-discord"></i>
+  </a>
+
+  <a href="https://t.me/VacLav_2348" class="social-link" aria-label="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+
+  <a href="https://ru.pinterest.com/vaclav2348/" class="social-link" aria-label="Pinterest">
+    <i class="fa-brands fa-pinterest"></i>
+  </a>
+
+  <a href="https://x.com/vaclav2348" class="social-link" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="social-link" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <a href="mailto:vacslag@gmail.com" class="social-link" aria-label="Gmail">
+  <i class="fa-solid fa-envelope"></i>
+    </div>
+    <p class="copyright">© 2026 VacLav Portfolio</p>
+  </footer>
+</body>
+</html>
