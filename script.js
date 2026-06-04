@@ -36,7 +36,7 @@ const GALLERY_BLOCKS = [
     type: 'group',
     tags: ['all', 'anime-manga'],
     previewImages: ['images/Image141.jpg', 'images/Image115(1).jpg', 'images/Image32.jpg'],
-    images: ['Image141.jpg',  'Image119.jpg', 'Image115.jpg',
+    images: [{ src: 'Image141.jpg', stages: [ 'Image141.jpg', 'Image140.jpg'] },  'Image119.jpg', 'Image115.jpg',
       { src: 'Image100.jpg', stages: [ 'Image100.jpg', 'Image102.jpg', 'Image101.jpg'] },
      'Image32.jpg']
   },
