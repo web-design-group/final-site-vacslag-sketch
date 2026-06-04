@@ -664,3 +664,35 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* Добавьте в конец файла styles.css */
+
+.clickable-image.has-stages {
+  cursor: pointer;
+  position: relative;
+}
+
+.clickable-image.has-stages::after {
+  content: "↻";
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 18px;
+  background: rgba(0,0,0,0.6);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  font-family: monospace;
+}
+
+.clickable-image.has-stages:hover::after {
+  opacity: 0.8;
+}
+.gallery-grid .gallery-block:last-child {
+  column-span: all;
+}
