@@ -13,7 +13,11 @@ const GALLERY_BLOCKS = [
     type: 'group',
     tags: ['all', 'cartoons'],  // ← ИСПРАВЛЕНО: было 'original-characters'
     previewImages: ['images/Image56.jpg', 'images/Image13.jpg', 'images/Image110.jpg'],
-    images: ['Image56.jpg', 'Image76.jpg', 'Image06.jpg', 'Image05.jpg', 'Image17.jpg', 'Image13.jpg', 'Image110.jpg']
+   images: [ { src: 'Image56.jpg', stages: ['Image56.jpg', 'Image57.jpg', 'Image56-2.jpg'] },
+   { src: 'Image74.jpg', stages: ['Image76.jpg', 'Image75.jpg', 'Image74.jpg'] },
+   'Image06.jpg', 'Image05.jpg',
+   { src: 'Image18.jpg', stages: [ 'Image18.jpg', 'Image17.jpg', 'Image15.jpg', 'Image16.jpg'] }
+   , 'Image13.jpg',  { src: 'Image110.jpg', stages: ['Image109.jpg', 'Image110.jpg'] }]
   },
   {
     id: 'land-1',
@@ -21,15 +25,20 @@ const GALLERY_BLOCKS = [
     type: 'group',
     tags: ['all', 'landscapes'],
     previewImages: ['images/Image51.jpg', 'images/Image80.jpg', 'images/Image120.jpg'],
-    images: ['Image51.jpg', 'Image02.jpg', 'Image11.jpg', 'Image12.jpg', 'Image80.jpg', 'Image120.jpg', 'Image118.jpg']
+    images: ['Image51.jpg', 'Image02.jpg', 'Image11.jpg', 'Image12.jpg',
+      { src: 'Image80.jpg', stages: ['Image80-4.jpg','Image80-1.jpg', 'Image80-2.jpg', 'Image80-3.jpg'] },
+     'Image120.jpg',
+     { src: 'Image118.jpg', stages: ['Image118-1.jpg', 'Image118.jpg'] }]
   },
   {
     id: 'anime-1',
     title: 'Anime/Manga',
     type: 'group',
     tags: ['all', 'anime-manga'],
-    previewImages: ['images/Image141.jpg', 'images/Image115(1).jpg', 'images/Image100(1).jpg'],
-    images: ['Image141.jpg', 'Image115.jpg', 'Image100.jpg', 'Image32.jpg', 'Image119.jpg']
+    previewImages: ['images/Image141.jpg', 'images/Image115(1).jpg', 'images/Image32.jpg'],
+    images: ['Image141.jpg',  'Image119.jpg', 'Image115.jpg',
+      { src: 'Image100.jpg', stages: [ 'Image100.jpg', 'Image102.jpg', 'Image101.jpg'] },
+     'Image32.jpg']
   },
   {
     id: 'LN',
@@ -37,31 +46,56 @@ const GALLERY_BLOCKS = [
     type: 'group',
     tags: ['all', 'ln-illustration'],  // ← ИСПРАВЛЕНО: убран лишний 'anime-manga' (но можно оставить, если нужно)
     previewImages: ['images/gbs.jpg', 'images/Ash-11.jpg', 'images/Image35.jpg'],
-    images: ['gbs.jpg', 'Image35.jpg', 'Ash-1.jpg', 'Ash-2.jpg', 'Ash-3.jpg', 'Ash-4.jpg', 'Ash-5.jpg', 'Ash-6.jpg', 'Ash-7.jpg', 'Ash-8.jpg', 'Ash-9.jpg', 'Ash-10.jpg', 'Ash-11.jpg', 'Ash-12.jpg']
+    images: [{ src: 'gbs.jpg', stages: ['gbs.jpg', 'gbs-2.jpg', 'gbs-2.jpg', 'gbs-3.jpg', 'gbs-4.jpg'] },
+      { src: 'illustration3.jpg', stages: ['illustration3.jpg', 'illustration4.jpg', 'illustration5.jpg'] },
+    'Image35.jpg',
+      { src: 'Ash-1.jpg', stages: ['Ash-1.jpg', 'Ash-2.jpg', 'Ash-3.jpg', 'Ash-4.jpg', 'Ash-5.jpg', 'Ash-6.jpg', 'Ash-7.jpg', 'Ash-8.jpg', 'Ash-9.jpg', 'Ash-10.jpg', 'Ash-11.jpg', 'Ash-12.jpg'] }]
   },
   {
     id: 'game-1',
     title: 'Game Concept Key Art',
     type: 'group',
     tags: ['all', 'games'],
-    previewImages: ['images/Image73.jpg', 'images/Image54.jpg', 'images/Image61.jpg'],
-    images: ['Image27.jpg', 'Image26.jpg', 'Image46.jpg', 'Image42.jpg', 'Image43.jpg', 'Image81.jpg', 'Image90.jpg', 'Image97.jpg', 'Image114.jpg', 'Image128.jpg', 'Image69.jpg']
+    previewImages: ['images/Image54.jpg', 'images/Image61.jpg', 'images/Image73.jpg'],
+    images: [{ src: 'sven.jpg', stages: ['sven.jpg', 'sven1.jpg', 'sven2.jpg', 'sven3.jpg', 'sven4.jpg'] },
+    { src: 'Image72.jpg', stages: ['Image72.jpg', 'Image70.jpg', 'Image71.jpg', 'Image73.jpg'] },
+    { src: 'Image27.jpg', stages: ['Image27.jpg', 'Image30.jpg', 'Image31.jpg', 'Image28.jpg', 'Image29.jpg'] },
+    { src: 'Image26.jpg', stages: ['Image26.jpg', 'deadlock-1.jpg', 'deadlock-2.jpg', 'deadlock-3.jpg'] },
+    { src: 'dr.jpg', stages: ['dr.jpg', 'dr1.jpg', 'dr2.jpg', 'dr3.jpg', 'dr4.jpg'] },
+    { src: 'хорни.jpg', stages: ['хорни.jpg', 'хорни1.jpg', 'хорни2.jpg', 'хорни3.jpg'] },
+    { src: 'drow0.jpg', stages: ['drow0.jpg', 'drow1.jpg', 'drow2.jpg', 'drow3.jpg'] },
+    { src: 'drowranger.jpg', stages: ['drowranger.jpg', 'drowranger1.jpg', 'drowranger2.jpg', 'drowranger3.jpg'] },
+    { src: 'Image59.jpg', stages: ['Image59.jpg', 'Image60.jpg'] },
+    { src: 'Image62.jpg', stages: ['Image62.jpg', 'Image63.jpg'] },
+    'Image90.jpg', 'Image97.jpg', 'Image114.jpg', 'Image128.jpg', 'Image69.jpg']
   },
   {
     id: 'vocaloid',
     title: 'Vocaloid',
     type: 'group',
     tags: ['all', 'vocaloid'],  // ← ИСПРАВЛЕНО: было 'anime-manga', 'ln-illustration'
-    previewImages: ['images/Image47.jpg', 'images/Image19.jpg', 'images/Image124.jpg'],
-    images: ['Image47.jpg', 'Image19.jpg', 'Image124.jpg', 'Image24.jpg', 'Image03.jpg', 'Image14.jpg', 'Image88.jpg', 'Image92.jpg', 'Image108.jpg', 'Image103.jpg', 'Image111.jpg', 'Image113.jpg', 'Image122.jpg', 'Image125.jpg', 'Image127.jpg']
+    previewImages: ['images/Image47.jpg', 'images/Image19.jpg', 'images/Image108.jpg'],
+    images: [{ src: 'Image47.jpg', stages: ['Image47.jpg', 'Image48.jpg', 'Image49.jpg'] },
+    { src: 'Image19.jpg', stages: ['Image19.jpg', 'Image21.jpg', 'Image22.jpg'] },
+    { src: 'Image124.jpg', stages: ['Image124.jpg', 'Image124-1.jpg'] },
+    { src: 'Image24.jpg', stages: ['Image24.jpg', 'Image23.jpg'] },
+    'Image03.jpg', 'Image14.jpg', 'Image88.jpg', 'Image92.jpg',
+    { src: 'Image108.jpg', stages: ['Image108.jpg', 'Image106.jpg', 'Image107.jpg', 'Image105.jpg'] },
+    'Image103.jpg', 'Image111.jpg', 'Image113.jpg',
+    { src: 'Image122.jpg', stages: ['Image122.jpg', 'Image123.jpg'] },
+    'Image125.jpg', 'Image127.jpg']
   },
   {
     id: 'graphic-design',
     title: 'Graphic design',
     type: 'group',
     tags: ['all', 'graphic-design'],
-    previewImages: ['images/Image66.jpg', 'images/Image64.jpg', 'images/Image38.jpg'],
-    images: ['Image66.jpg','Image67.jpg' ,'Image64.jpg','Image65.jpg', 'Image38.jpg', 'Image36.jpg', '05LeA-1.jpg','05LeA-2.jpg', 'Image93.jpg']
+    previewImages: ['images/Image144.jpg', 'images/Image66-67.jpg', 'images/Image38.jpg'],
+    images: [{ src: 'Image66.jpg', stages: ['Image66.jpg', 'Image67.jpg'] },
+    'Image65.jpg', 'Image38.jpg', 'Image36.jpg', '05LeA-1.jpg','05LeA-2.jpg', 'Image93.jpg',
+     { src: 'обложка.jpg', stages: ['обложка.jpg', 'flyleaf.jpg','Le Anh Tuan-4.jpg'] },
+     'Image144.jpg', 'Image147.jpg',
+  { src: 'расчестка2.jpg', stages: ['расчестка2.jpg', 'расчестка.jpg'] }]
   }
 ];
 document.addEventListener('DOMContentLoaded', () => {
@@ -187,12 +221,8 @@ function cycleImage(img) {
   const current = Number(img.dataset.currentIndex || 0);
   const next = (current + 1) % stages.length;
 
-  img.classList.add('is-fading');
-  setTimeout(() => {
-    img.src = 'images/' + stages[next];
-    img.dataset.currentIndex = String(next);
-    img.classList.remove('is-fading');
-  }, 180);
+  img.src = 'images/' + stages[next];
+  img.dataset.currentIndex = String(next);
 }
 
 function updateActiveCategory(hash) {
