@@ -643,10 +643,10 @@ body {
   cursor: pointer;
 }
 
-.gallery-item.is-fading {
+/* .gallery-item.is-fading {
   opacity: 0.3;
   transition: opacity 0.18s ease;
-}
+} */
 
 @media (max-width: 768px) {
   .gallery-grid.two-columns,
