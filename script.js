@@ -46,7 +46,7 @@ const GALLERY_BLOCKS = [
     type: 'group',
     tags: ['all', 'ln-illustration'],  // ← ИСПРАВЛЕНО: убран лишний 'anime-manga' (но можно оставить, если нужно)
     previewImages: ['images/gbs.jpg', 'images/Ash-11.jpg', 'images/Image35.jpg'],
-    images: [{ src: 'gbs.jpg', stages: ['gbs.jpg', 'gbs-2.jpg', 'gbs-2.jpg', 'gbs-3.jpg', 'gbs-4.jpg'] },
+    images: [{ src: 'gbs.jpg', stages: ['gbs.jpg', 'gbs-2.jpg', 'gbs-3.jpg', 'gbs-4.jpg'] },
       { src: 'illustration3.jpg', stages: ['illustration3.jpg', 'illustration4.jpg', 'illustration5.jpg'] },
     'Image35.jpg',
       { src: 'Ash-1.jpg', stages: ['Ash-1.jpg', 'Ash-2.jpg', 'Ash-3.jpg', 'Ash-4.jpg', 'Ash-5.jpg', 'Ash-6.jpg', 'Ash-7.jpg', 'Ash-8.jpg', 'Ash-9.jpg', 'Ash-10.jpg', 'Ash-11.jpg', 'Ash-12.jpg'] }]
@@ -101,6 +101,7 @@ const GALLERY_BLOCKS = [
 document.addEventListener('DOMContentLoaded', () => {
   initScrollButton();
   initPortfolioRouter();
+  preloadAllStages();
 });
 
 function initScrollButton() {
@@ -217,12 +218,33 @@ function handleGalleryClick(event) {
 
 function cycleImage(img) {
   const stages = JSON.parse(img.dataset.stages || '[]');
-  if (stages.length < 2) return;
+  if (!stages || stages.length < 2) return;
+
   const current = Number(img.dataset.currentIndex || 0);
   const next = (current + 1) % stages.length;
 
   img.src = 'images/' + stages[next];
   img.dataset.currentIndex = String(next);
+
+  // Предзагружаем следующую
+  const nextNext = (next + 1) % stages.length;
+  preloadImage('images/' + stages[nextNext]);
+}
+
+function preloadImage(src) {
+  const img = new Image();
+  img.src = src;
+}
+function preloadAllStages() {
+  setTimeout(() => {
+    GALLERY_BLOCKS.forEach(block => {
+      block.images.forEach(img => {
+        if (typeof img === 'object' && img.stages) {
+          img.stages.forEach(stage => preloadImage('images/' + stage));
+        }
+      });
+    });
+  }, 2000); // даём странице сначала загрузиться самой
 }
 
 function updateActiveCategory(hash) {
