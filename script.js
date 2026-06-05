@@ -139,7 +139,6 @@ const GALLERY_BLOCKS = [
       { src: '13.jpg', stages: ['13.jpg', 'photo_2026-06-05_22-57-06.jpg', 'photo_2026-06-05_22-57-12.jpg', 'photo_2026-06-05_22-57-15.jpg', 'photo_2026-06-05_22-57-17.jpg', 'photo_2026-06-05_22-57-05.jpg', 'photo_2026-06-05_22-57-09.jpg'] },
       { src: '6-1.jpg', stages: ['6-1.jpg', '6.jpg'] },
       { src: '7.jpg', stages: ['7.jpg', '7-1.jpg'] },
-      { src: '10.jpg', stages: ['10.jpg', '10-1.jpg'] },
       { src: '10.jpg', stages: ['10.jpg', '10-1.jpg', '10-2.jpg'] },
       { src: '11.jpg', stages: ['11.jpg', '11-1.jpg'] },
       { src: '12.jpg', stages: ['12.jpg', '12-1.jpg'] },
