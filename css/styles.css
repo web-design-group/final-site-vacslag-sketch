@@ -253,8 +253,6 @@ body {
 }
 
 .clickable-image         { cursor: pointer; }
-.clickable-image.has-stages { cursor: ew-resize; }
-
 /* ========== STAGE WRAPPER & ARROWS ========== */
 .stage-wrapper {
   position: relative;
