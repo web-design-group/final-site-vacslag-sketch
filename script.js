@@ -122,7 +122,7 @@ const GALLERY_BLOCKS = [
       'Image65.jpg', 'Image38.jpg', 'Image36.jpg',
       { src: '05LeA-1.jpg', stages: ['05LeA-1.jpg', '05LeA-2.jpg'] },
       { src: 'обложка.jpg', stages: ['обложка.jpg', 'flyleaf.jpg', 'Le Anh Tuan-4.jpg'] },
-      'Image144.jpg', 'Image147.jpg', 'расчестка2.jpg'
+      'Image144.jpg', 'расчестка2.jpg'
     ]
   },
   {
@@ -137,12 +137,13 @@ const GALLERY_BLOCKS = [
       { src: 'Image89.jpg', stages: ['Image89.jpg', 'Image87.jpg'] },
       '5.jpg',
       { src: '13.jpg', stages: ['13.jpg', 'photo_2026-06-05_22-57-06.jpg', 'photo_2026-06-05_22-57-12.jpg', 'photo_2026-06-05_22-57-15.jpg', 'photo_2026-06-05_22-57-17.jpg', 'photo_2026-06-05_22-57-05.jpg', 'photo_2026-06-05_22-57-09.jpg'] },
-      { src: '6-1.jpg', stages: ['6-1.jpg', '6.jpg'] },
-      { src: '7.jpg', stages: ['7.jpg', '7-1.jpg'] },
-      { src: '10.jpg', stages: ['10.jpg', '10-1.jpg', '10-2.jpg'] },
-      { src: '11.jpg', stages: ['11.jpg', '11-1.jpg'] },
-      { src: '12.jpg', stages: ['12.jpg', '12-1.jpg'] },
-      { src: '8.jpg', stages: ['8.jpg', '8-1.jpg'] }
+      // { src: '6-1.jpg', stages: ['6-1.jpg', '6.jpg'] },
+      // { src: '7.jpg', stages: ['7.jpg', '7-1.jpg'] },
+      // { src: '10.jpg', stages: ['10.jpg', '10-1.jpg'] },
+      // { src: '10.jpg', stages: ['10.jpg', '10-1.jpg', '10-2.jpg'] },
+      // { src: '11.jpg', stages: ['11.jpg', '11-1.jpg'] },
+      // { src: '12.jpg', stages: ['12.jpg', '12-1.jpg'] },
+      // { src: '8.jpg', stages: ['8.jpg', '8-1.jpg'] }
     ]
   }
 ];
@@ -226,10 +227,16 @@ function renderGroupView(root, groupId) {
 
   // Preload stages only for the current group
   block.images.forEach(img => {
-    if (typeof img === 'object' && img.stages) {
-      img.stages.forEach(stage => preloadImage('images/' + stage));
-    }
+    const first = typeof img === 'object' ? img.stages[0] : img;
+    preloadImage('images/' + first);
   });
+  setTimeout(() => {
+    block.images.forEach(img => {
+      if (typeof img === 'object' && img.stages.length > 1) {
+        img.stages.slice(1).forEach(s => preloadImage('images/' + s));
+      }
+    });
+  }, 2000);
 }
 
 function renderStageItem(img, groupTitle, index) {
@@ -239,6 +246,8 @@ function renderStageItem(img, groupTitle, index) {
 
   return `<div class="stage-wrapper${hasMultiple ? ' has-arrows' : ''}">
     <img src="images/${src}" alt="${groupTitle} ${index + 1}"
+    loading="lazy"
+      decoding="async"
       class="gallery-item clickable-image${hasMultiple ? ' has-stages' : ''}"
       data-stages='${JSON.stringify(stages)}'
       data-current-index='0'>
@@ -253,19 +262,19 @@ function renderStageItem(img, groupTitle, index) {
 function renderBlockCard(block) {
   const overlay = `<div class="block-overlay"><span>${block.title}</span></div>`;
 
-  if (block.type === 'group') {
-    const [main, side1, side2] = block.previewImages;
-    return `<article class="gallery-block group-block" data-group-id="${block.id}">
-      <div class="group-layout">
-        <img src="${main}" alt="${block.title}" class="gallery-item group-main">
-        <div class="group-side">
-          <img src="${side1}" alt="${block.title}" class="gallery-item">
-          <img src="${side2}" alt="${block.title}" class="gallery-item">
-        </div>
+if (block.type === 'group') {
+  const [main, side1, side2] = block.previewImages;
+  return `<article class="gallery-block group-block" data-group-id="${block.id}">
+    <div class="group-layout">
+      <img src="${main}" alt="${block.title}" class="gallery-item group-main" decoding="async">
+      <div class="group-side">
+        <img src="${side1}" alt="${block.title}" class="gallery-item" loading="lazy" decoding="async">
+        <img src="${side2}" alt="${block.title}" class="gallery-item" loading="lazy" decoding="async">
       </div>
-      ${overlay}
-    </article>`;
-  }
+    </div>
+    ${overlay}
+  </article>`;
+}
 
   return `<article class="gallery-block single-block" data-group-id="${block.id}">
     <img src="${block.previewImages[0]}" alt="${block.title}" class="gallery-item">
