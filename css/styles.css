@@ -179,8 +179,6 @@ body {
   break-inside: avoid;
   margin-bottom: var(--gap);
   position: relative;
-  border: 1px solid var(--color-border);
-  border-bottom: none;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -198,6 +196,16 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
+}
+
+.group-side .gallery-item {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.single-block .gallery-item {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .gallery-item {
@@ -253,6 +261,7 @@ body {
 }
 
 .clickable-image         { cursor: pointer; }
+
 /* ========== STAGE WRAPPER & ARROWS ========== */
 .stage-wrapper {
   position: relative;
