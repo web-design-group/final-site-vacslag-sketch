@@ -1,71 +1,26 @@
 const GALLERY_BLOCKS = [
   {
-    id: 'anime-1',
-    title: 'Anime/Manga',
+    id: 'graphic-design',
+    title: 'Graphic design',
     type: 'group',
-    tags: ['all', 'anime-manga'],
-    previewImages: ['images/Image141.jpg', 'images/Image115(1).jpg', 'images/Image32.jpg'],
+    tags: ['all', 'graphic-design'],
+    previewImages: ['images/Image144.jpg', 'images/Image66-67.jpg', 'images/Image38.jpg'],
     images: [
-      { src: 'Image141.jpg', stages: ['Image141.jpg', 'Image140.jpg', 'Image142.jpg', 'Image142-1.jpg'] },
-      { src: 'Image131.jpg', stages: ['Image131.jpg', 'Image131-1.jpg'] },
-      'Image119.jpg', 'Image133.jpg', 'Image115.jpg',
-      { src: 'Image100.jpg', stages: ['Image100.jpg', 'Image102.jpg', 'Image101.jpg'] },
-      'Image32.jpg',
-      { src: 'Image146-3.jpg', stages: ['Image146-3.jpg', 'Image146.jpg', 'Image146-1.jpg', 'Image146-2.jpg'] }
+      { src: 'Image66.jpg', stages: ['Image66.jpg', 'Image67.jpg'] }, 'Зима.jpg',
+      'Image65.jpg', 'Image38.jpg', 'Image36.jpg',
+      { src: '05LeA-1.jpg', stages: ['05LeA-1.jpg', '05LeA-2.jpg'] },
+      { src: 'обложка.jpg', stages: ['обложка.jpg', 'flyleaf.jpg', 'Le Anh Tuan-4.jpg'] }, 'menu-01.png',
+      'Image144.jpg', ,'020LeA.jpg','расчестка2.jpg'
     ]
   },
-  {
-    id: 'LN',
-    title: 'LN-illustrations',
-    type: 'group',
-    tags: ['all', 'ln-illustration'],
-    previewImages: ['images/gbs.jpg', 'images/Ash-11.jpg', 'images/Image35.jpg'],
-    images: [
-      { src: 'gbs.jpg', stages: ['gbs.jpg', 'gbs-2.jpg', 'gbs-3.jpg', 'gbs-4.jpg'] },
-      { src: 'illustration3.jpg', stages: ['illustration3.jpg', 'illustration4.jpg', 'illustration5.jpg'] },
-      'Image35.jpg',
-      { src: 'Ash-1.jpg', stages: ['Ash-1.jpg', 'Ash-2.jpg', 'Ash-3.jpg', 'Ash-4.jpg', 'Ash-5.jpg', 'Ash-6.jpg', 'Ash-7.jpg', 'Ash-8.jpg', 'Ash-9.jpg', 'Ash-10.jpg', 'Ash-11.jpg', 'Ash-12.jpg'] }
-    ]
-  },
-  {
-    id: 'cartoons',
-    title: 'Cartoons',
-    type: 'group',
-    tags: ['all', 'cartoons'],
-    previewImages: ['images/Image56.jpg', 'images/Image13.jpg', 'images/Image110.jpg'],
-    images: [
-      { src: 'Image56.jpg', stages: ['Image56.jpg', 'Image57.jpg', 'Image56-2.jpg'] },
-      { src: 'Image74.jpg', stages: ['Image76.jpg', 'Image75.jpg', 'Image74.jpg'] },
-      'Image06.jpg', 'Image05.jpg',
-      { src: 'Image18.jpg', stages: ['Image18.jpg', 'Image17.jpg', 'Image15.jpg', 'Image16.jpg'] },
-      'Image13.jpg',
-      { src: 'Image110.jpg', stages: ['Image109.jpg', 'Image110.jpg', 'Image112.jpg'] },
-      { src: 'Image135.jpg', stages: ['Image135.jpg', 'Image134.jpg', 'Image136.jpg', 'Image137.jpg', 'Image138.jpg', 'Image139.jpg'] }
-    ]
-  },
-  {
-    id: 'land-1',
-    title: 'Landscapes',
-    type: 'group',
-    tags: ['all', 'landscapes'],
-    previewImages: ['images/Image51.jpg', 'images/Image80.jpg', 'images/Image120.jpg'],
-    images: [
-      { src: 'Image51.jpg', stages: ['Image51.jpg', 'Image50.jpg'] },
-      'Image02.jpg', 'Image11.jpg',
-      { src: 'Image12.jpg', stages: ['Image12.jpg', 'Image12-1.jpg', 'Image12-2.jpg'] },
-      { src: 'Image80.jpg', stages: ['Image80-4.jpg', 'Image80-1.jpg', 'Image80-2.jpg', 'Image80-3.jpg'] },
-      'Image120.jpg',
-      { src: 'Image118.jpg', stages: ['Image118-1.jpg', 'Image118.jpg'] }
-    ]
-  },
-  {
+    {
     id: 'game-1',
     title: 'Game Concept Key Art',
     type: 'group',
     tags: ['all', 'games'],
     previewImages: ['images/Image54.jpg', 'images/Image61.jpg', 'images/Image73.jpg'],
     images: [
-      { src: 'sven.jpg', stages: ['sven.jpg', 'sven1.jpg', 'sven2.jpg', 'sven3.jpg', 'sven4.jpg'] },
+      { src: 'sven.jpg', stages: ['sven.jpg', 'sven2.jpg', 'sven3.jpg', 'sven4.jpg'] },
       { src: 'Image72.jpg', stages: ['Image72.jpg', 'Image70.jpg', 'Image71.jpg', 'Image73.jpg'] },
       { src: 'Image27.jpg', stages: ['Image27.jpg', 'Image30.jpg', 'Image31.jpg', 'Image28.jpg', 'Image29.jpg'] },
       { src: 'Image26.jpg', stages: ['Image26.jpg', 'deadlock-1.jpg', 'deadlock-2.jpg', 'deadlock-3.jpg'] },
@@ -81,19 +36,34 @@ const GALLERY_BLOCKS = [
     ]
   },
   {
-    id: 'oc',
-    title: 'Original Characters',
+    id: 'LN',
+    title: 'LN-illustrations',
     type: 'group',
-    tags: ['all', 'original-characters'],
-    previewImages: ['images/Image07.jpg', 'images/Image09.jpg', 'images/Image10.jpg'],
+    tags: ['all', 'ln-illustration'],
+    previewImages: ['images/gbs.jpg', 'images/Ash-11.jpg', 'images/Image35.jpg'],
     images: [
-      { src: 'Image07.jpg', stages: ['Image07.jpg', 'Image07-1.jpg'] },
-      'Image08.jpg',
-      { src: 'Image09.jpg', stages: ['Image09.jpg', 'Image09-1.jpg'] },
-      'Image10.jpg'
+      { src: 'gbs.jpg', stages: ['gbs.jpg', 'gbs-2.jpg', 'gbs-3.jpg', 'gbs-4.jpg'] },
+      { src: 'illustration3.jpg', stages: ['illustration3.jpg', 'illustration4.jpg', 'illustration5.jpg'] },
+      'Image35.jpg',
+      { src: 'Ash-1.jpg', stages: ['Ash-1.jpg', 'Ash-2.jpg', 'Ash-3.jpg', 'Ash-4.jpg', 'Ash-5.jpg', 'Ash-6.jpg', 'Ash-7.jpg', 'Ash-8.jpg', 'Ash-9.jpg', 'Ash-10.jpg', 'Ash-11.jpg', 'Ash-12.jpg'] }
     ]
   },
-  {
+    {
+    id: 'land-1',
+    title: 'Landscapes',
+    type: 'group',
+    tags: ['all', 'landscapes'],
+    previewImages: ['images/Image51.jpg', 'images/Image80.jpg', 'images/Image120.jpg'],
+    images: [
+      { src: 'Image51.jpg', stages: ['Image51.jpg', 'Image50.jpg'] },
+      'Image02.jpg', 'Image11.jpg',
+      { src: 'Image12.jpg', stages: ['Image12.jpg', 'Image12-1.jpg', 'Image12-2.jpg'] },
+      { src: 'Image80.jpg', stages: ['Image80-4.jpg', 'Image80-1.jpg', 'Image80-2.jpg', 'Image80-3.jpg'] },
+      'Image120.jpg',
+      { src: 'Image118.jpg', stages: ['Image118-1.jpg', 'Image118.jpg'] }
+    ]
+  },
+    {
     id: 'vocaloid',
     title: 'Vocaloid',
     type: 'group',
@@ -112,17 +82,47 @@ const GALLERY_BLOCKS = [
     ]
   },
   {
-    id: 'graphic-design',
-    title: 'Graphic design',
+    id: 'anime-1',
+    title: 'Anime/Manga',
     type: 'group',
-    tags: ['all', 'graphic-design'],
-    previewImages: ['images/Image144.jpg', 'images/Image66-67.jpg', 'images/Image38.jpg'],
+    tags: ['all', 'anime-manga'],
+    previewImages: ['images/Image141.jpg', 'images/Image115(1).jpg', 'images/Image32.jpg'],
     images: [
-      { src: 'Image66.jpg', stages: ['Image66.jpg', 'Image67.jpg'] },
-      'Image65.jpg', 'Image38.jpg', 'Image36.jpg',
-      { src: '05LeA-1.jpg', stages: ['05LeA-1.jpg', '05LeA-2.jpg'] },
-      { src: 'обложка.jpg', stages: ['обложка.jpg', 'flyleaf.jpg', 'Le Anh Tuan-4.jpg'] },
-      'Image144.jpg', 'расчестка2.jpg'
+      { src: 'Image141.jpg', stages: ['Image141.jpg', 'Image140.jpg', 'Image142.jpg', 'Image142-1.jpg'] },
+      { src: 'Image131.jpg', stages: ['Image131.jpg', 'Image131-1.jpg'] },
+      'Image119.jpg', 'Image133.jpg', 'Image115.jpg',
+      { src: 'Image100.jpg', stages: ['Image100.jpg', 'Image102.jpg', 'Image101.jpg'] },
+      'Image32.jpg',
+      { src: 'Image146-3.jpg', stages: ['Image146-3.jpg', 'Image146.jpg', 'Image146-1.jpg', 'Image146-2.jpg'] }
+    ]
+  },
+  {
+    id: 'oc',
+    title: 'Original Characters',
+    type: 'group',
+    tags: ['all', 'original-characters'],
+    previewImages: ['images/Image07.jpg', 'images/Image09.jpg', 'images/Image10.jpg'],
+    images: [
+      { src: 'Image07.jpg', stages: ['Image07.jpg', 'Image07-1.jpg'] },
+      'Image08.jpg',
+      { src: 'Image09.jpg', stages: ['Image09.jpg', 'Image09-1.jpg'] },
+      'Image10.jpg'
+    ]
+  },
+    {
+    id: 'cartoons',
+    title: 'Cartoons',
+    type: 'group',
+    tags: ['all', 'cartoons'],
+    previewImages: ['images/Image56.jpg', 'images/Image13.jpg', 'images/Image110.jpg'],
+    images: [
+      { src: 'Image56.jpg', stages: ['Image56.jpg', 'Image57.jpg', 'Image56-2.jpg'] },
+      { src: 'Image74.jpg', stages: ['Image76.jpg', 'Image75.jpg', 'Image74.jpg'] },
+      'Image06.jpg', 'Image05.jpg',
+      { src: 'Image18.jpg', stages: ['Image18.jpg', 'Image17.jpg', 'Image15.jpg', 'Image16.jpg'] },
+      'Image13.jpg',
+      { src: 'Image110.jpg', stages: ['Image109.jpg', 'Image110.jpg', 'Image112.jpg'] },
+      { src: 'Image135.jpg', stages: ['Image135.jpg', 'Image134.jpg', 'Image136.jpg', 'Image137.jpg', 'Image138.jpg', 'Image139.jpg'] }
     ]
   },
   {
