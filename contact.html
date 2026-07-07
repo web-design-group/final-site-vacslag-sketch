@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VacLav | About</title>
+  <title>VacLav | Contacts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Post+No+Bills+Colombo:wght@400;600&family=Play:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="about-page">
+<body class="contact-page">
 
 <div class="container">
 
   <!-- LEFT PANEL - Sidebar -->
-  <aside class="sidebar">
+<aside class="sidebar">
   <h1 class="name" onclick="window.location.href='index.html';" style="cursor: pointer; border-bottom: none; padding: 0; margin-bottom: 20px;">
   <img src="images/Title.svg" alt="VacLav" style="width: 100%; max-width: 180px; height: auto;">
 </h1>
@@ -35,9 +35,10 @@
 
     <div class="spacer"></div>
 
+    <!-- Navigation with working links and active page highlight -->
     <nav class="main-nav">
-      <a href="about.html" class="nav-link active-page">Обо мне</a>
-      <a href="contact.html" class="nav-link">Связь со мной</a>
+      <a href="about.html" class="nav-link">Обо мне</a>
+      <a href="contact.html" class="nav-link active-page">Связь со мной</a>
       <!-- <a href="resources.html" class="nav-link">Ресурсы</a> -->
     </nav>
 
@@ -69,30 +70,35 @@
 </div>
   </aside>
 
-  <!-- RIGHT PANEL - About content -->
+  <!-- RIGHT PANEL - Contact Form -->
   <main class="content">
     <div class="page-content">
-      <h2 class="page-title">Обо мне</h2>
+      <h2 class="page-title">Связь со мной (не работает)</h2>
       
-      <div class="info-block">
-        <div class="info-item">
-          <span class="info-label">Возраст:</span>
-          <span class="info-value">22 (14/05/2004)</span>
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required>
         </div>
-        <div class="info-item">
-          <span class="info-label">Образование:</span>
-          <span class="info-value">Высшее, графический дизайнер в сфере рекламы</span>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Ваш email" required>
         </div>
-        <div class="info-item">
-          <span class="info-label">Программы:</span>
-          <span class="info-value">Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Clip Studio Paint</span>
+        
+        <div class="form-group">
+          <label for="subject">Тема</label>
+          <input type="text" id="subject" name="subject" placeholder="Тема сообщения" required>
         </div>
-      </div>
-      
-      <div class="about-text">
-        <p>Здравствуйте! Я художник и графический дизайнер. Специализируюсь на создании сплэш-артов, а также занимаюсь комиксами, концепт-артом и фан-артом.</p>
-        <p>Кроме того, у меня есть опыт в типографике: я занимаюсь вёрсткой книг, комиксов и манги, а также полным дизайном книг — от начала и до конца.</p>
-      </div>
+        
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" rows="6" placeholder="Ваше сообщение..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Отправить</button>
+      </form>
     </div>
   </main>
 
@@ -100,7 +106,7 @@
 <footer class="mobile-footer">
     <nav class="mobile-nav">
       <a href="index.html" class="nav-link">Главная</a>
-      <a href="contact.html" class="nav-link">Связь со мной</a>
+      <a href="about.html" class="nav-link">Обо мне</a>
     </nav>
     <div class="mobile-socials">
   <a href="https://discord.gg/jYSVGRtmV" class="social-link" aria-label="Discord">
