@@ -8,7 +8,8 @@ const GALLERY_BLOCKS = [
     images: [
       { src: 'Image66.jpg', stages: ['Image66.jpg', 'Image67.jpg'] }, 'Зима.jpg',
       'Image65.jpg', 'Image38.jpg', 'Image36.jpg',
-      { src: '05LeA-1.jpg', stages: ['05LeA-1.jpg', '05LeA-2.jpg'] },
+      { src: '05LeA-1.jpg', stages: ['05LeA-1.jpg', '05LeA-2.jpg', '05LeA-3.jpg'] },
+      { src: '082LeA-1.jpg', stages: ['082LeA-1.jpg', '082LeA-2.jpg', '082LeA-3.jpg'] },
       { src: 'обложка.jpg', stages: ['обложка.jpg', 'flyleaf.jpg', 'Le Anh Tuan-4.jpg'] }, 'menu-01.png',
       'Image144.jpg', ,'020LeA.jpg','расчестка2.jpg'
     ]
